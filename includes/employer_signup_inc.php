@@ -15,7 +15,7 @@ if (isset($_POST['signup'])) {
 
      require('../includes/errors_inc.php');
 
-     if (emptyInputEmployerSignup($firstname, $lastname, $email, $phoneNo , $company, $username, $password) == true) {
+     if (emptyInputEmployerSignup($firstName, $lastName, $email, $phoneNo , $company, $username, $password) == true) {
           header("Location: ".ROOT."views/regular_signup.php?error=empty&fname=" . $firstName . "&lname=" . $lastName . "&email=" . $email . "&phone=" . $phoneNo . "&uid=" . $username);
           exit();
      } else {

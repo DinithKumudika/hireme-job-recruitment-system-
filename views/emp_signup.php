@@ -18,7 +18,7 @@
       <a href="regular_signup.php"><button class="signup-opt-btn active" value="applicant">For Applicants</button></a>
       <a href="emp_signup.php"><button class="signup-opt-btn" value="employer">For Employers</button></a>
     </div>
-    <form action="../includes/login_inc.php" method="post">
+    <form action="../includes/employer_signup_inc.php" method="post">
     <?php
         if(isset($_GET['fname'])){
           echo '<input type="text" placeholder="First name" class="form-input" name="f-name" id="f-name" value='.$_GET['fname'].'>';
