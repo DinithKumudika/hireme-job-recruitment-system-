@@ -5,7 +5,7 @@ include('../config/db.php');
 include('../config/root.php');
 
 if (isset($_POST['login'])) {
-    $username = mysqli_escape_string($conn,htmlspecialchars($_POST['username'])) ;
+    $username = mysqli_escape_string($conn,htmlspecialchars($_POST['username']));
     $password = mysqli_escape_string($conn,htmlspecialchars($_POST['pwd']));
 
     if(empty($username)||empty($password)){

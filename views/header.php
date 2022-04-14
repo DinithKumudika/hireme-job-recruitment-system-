@@ -16,7 +16,7 @@
         <?=$admin;?>
         <li><a href="./contact.php">Contact Us</a></li>
         <li><a href="./facilities.php">Facilities</a></li>
-        <li><a href="#">Help</a></li>
+        <li><a href="./help.php">Help</a></li>
         <button class="login-btn {$disabled}" id="login"><a href=<?=$loginpage_link?>><?=$login_display?></a></button>
         <form action="header.php" method="post">
           <?= $logout; ?>
