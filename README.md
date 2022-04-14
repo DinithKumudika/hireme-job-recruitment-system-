@@ -1,1 +1,2 @@
-# hireme-job-recruitment-system-
+# WAD-Group-Project
+WAD group project (online job recuirement system)
