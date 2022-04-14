@@ -19,10 +19,8 @@ if (isset($_SESSION['admin'])) {
 
         if ($result == TRUE) {
 
-            echo ("<script LANGUAGE='JavaScript'>
-            window.alert('Record deleted successfully');
-            window.location.href=" . ROOT . "'views/view_users.php';
-            </script>");
+            echo ("<script>window.alert('Record deleted successfully');</script>");
+            echo("<script>window.location.href='" . ROOT . "views/view_users.php';</script>");
         } else {
 
             echo "Error:" . $sql . "<br>" . $conn->error;
