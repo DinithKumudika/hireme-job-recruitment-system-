@@ -1,7 +1,7 @@
 <?php
 session_start();
 require('../config/db.php');
-require('../config/root.php');
+// require('../config/root.php');
 
 $empty_input = "";
 $upload_err = "";

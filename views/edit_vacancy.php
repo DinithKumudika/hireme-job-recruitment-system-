@@ -44,7 +44,7 @@ if (isset($_GET['vacancy_id'])) {
     ?>
     <div style="margin-left:250px; margin-top:90px;">
 
-        <form action="../includes/edit_vacancy_inc.php" method="post">
+        <form action="../includes/edit_vacancy_inc.php?<?php echo $vacancy_id ?>" method="post">
             <label for="job_title">Job Title:</label>
             <br>
             <br>
@@ -97,7 +97,7 @@ if (isset($_GET['vacancy_id'])) {
             <label for="description">description</label>
             <br>
             <br>
-            <textarea rows="15" name="description"><?php $row['description']; ?></textarea>
+            <textarea rows="15" name="description" value="<?php echo $row['description']; ?>"></textarea>
             <input type="submit" value="Update" name="update" class="submit-btn">
         </form>
     </div>

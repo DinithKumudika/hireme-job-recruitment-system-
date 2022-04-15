@@ -20,12 +20,10 @@ if (isset($_POST['submit'])) {
 
           $description = $_POST['description'];
 
-          $emp_id = $_POST['emp_id'];
-
           //  $sql = "UPDATE `vacancy` SET `job_title`='$job_title',`position`='$position',`company`='$company',`salary`='$salary',`category`='$category',`description`='$description',`emp_id`='$emp_id'  WHERE `vacancy`.`vacancy_id`='$vacancy_id'"; 
 
 
-          $sql = "INSERT INTO `vacancy`(`vacancy_id`,`job_title`, `position`, `company`, `salary`, `category`, `description`,`emp_id`) VALUES (NULL,'$job_title','$position','$company','$salary','$category','$description','$emp_id');";
+          $sql = "INSERT INTO `vacancy`(`job_title`, `position`, `company`, `salary`, `category`, `description`) VALUES ('$job_title','$position','$company','$salary','$category','$description');";
 
 
           // $sql="INSERT INTO `vacancy` (`vacancy_id`, `job_title`, `position`, `company`, `salary`, `category`, `description`, `emp_id`) VALUES (NULL, 'lacoa;skncolsc', 'asaesdcasefed', 'Seffgfesdcaseg', 'aegsedfsfseg', 'aegdszdgrehrhaeer', 'asegasdgasdgasdvasegasdgawrgasdbsdrbadrb', '2');";

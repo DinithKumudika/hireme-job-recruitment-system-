@@ -4,6 +4,9 @@ include('../config/root.php');
 include('../config/db.php');
 
 //update data to the database
+if(isset($_GET['vacancy_id'])){
+    $vacancy_id = $_GET['vacancy_id'];
+}
 
 if (isset($_POST['update'])) {
     

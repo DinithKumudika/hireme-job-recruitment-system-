@@ -80,7 +80,7 @@
                <label for="description">description</label><br>
                <br>
                <br>
-               <textarea rows="15"></textarea>
+               <textarea rows="15" name="description"></textarea>
                <input type="submit" value="submit" name="submit" class="submit-btn">
           </form>
      </div>

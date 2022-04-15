@@ -9,20 +9,24 @@ $success = '';
 
 $vacancy_id = $_GET['vacancy_id'];
 
-if (isset($_SESSION['applicant'])) {
+if (isset($_SESSION['applicant']) || isset($_SESSION['default'])) {
 
      $username = $_SESSION['uid'];
-     $query = "SELECT `applicant_ID` FROM `applicant_reg` WHERE `username` = '$username'";
+     $query = "SELECT `applicant_ID` FROM `applicant_reg` WHERE `username` = '$username';";
      $result = mysqli_query($conn, $query);
      if (mysqli_num_rows($result) > 0) {
           $row = mysqli_fetch_assoc($result);
           $id = $row['applicant_ID'];
      }
 }
+else{
+     echo "<script>alert('login as applicant');</script>";
+     echo "<script>window.location.href='".ROOT."views/login.php';</script>";
+}
 
 if (isset($_POST['apply'])) {
 
-     if (isset($_SESSION['applicant'])) {
+     if (isset($_SESSION['applicant']) || isset($_SESSION['default'])) {
 
           $full_name = $_POST['full-name'];
           $address_line1 = $_POST['address-1'];
@@ -49,8 +53,7 @@ if (isset($_POST['apply'])) {
                else {
                     if ($fileExt !== 'pdf') {
                          header("Location: ".ROOT."views/apply.php?vacancy_id=".$vacancy_id."&error=file_format");
-                         exit();
-                          
+                         exit();    
                     } 
                     else {
                          //renaming file with applicant_id and current timestamp
