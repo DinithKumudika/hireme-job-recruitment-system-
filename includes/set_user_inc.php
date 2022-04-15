@@ -21,7 +21,7 @@ if(isset($_SESSION['default']) || isset($_SESSION['applicant']) || isset($_SESSI
 
   }
   else if(isset($_SESSION['admin'])){
-      $admin = '<li><a href="admin_home.php">Admin</a></li>';
+      $admin = '<li><a href="./admin_home.php">Admin</a></li>';
       $hiring = '<li><a href="./hire.php">Hire</a></li>';
       $login_display = $_SESSION['uid'];
       $vacancy = '<li><a href="./vacancy.php">Vacancies</a></li>';   
